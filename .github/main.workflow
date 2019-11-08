@@ -14,6 +14,6 @@ action "Lint Hello World" {
 action "Deploy Hello World" {
     needs = ["Build Hello World", "Lint Hello World"]
     uses = "serverless/github-action@master"
-    secrets =  ["AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY"]
+    secrets =  ["ACCESS_KEY_ID", "SECRET_ACCESS_KEY"]
     args = "deploy"
 }
